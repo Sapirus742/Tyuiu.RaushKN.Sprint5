@@ -6,7 +6,7 @@ namespace Tyuiu.RaushKN.Sprint5.Task1.V29.Lib
     {
         public string SaveToFileTextData(int startValue, int stopValue)
         {
-            string path = Path.Combine(new string[] { @"C:\Users\rausc\source\repos\Tyuiu.RaushKN.Sprint5\Tyuiu.RaushKN.Sprint5.Task1.V29\bin\Debug\net8.0\OutPutFileTask1.txt" });
+            string path = Path.Combine(new string[] { Path.GetTempPath(), "OutPutFileTask1.txt" });
             FileInfo fileInfo = new FileInfo(path);
             bool fileExists = fileInfo.Exists;
 
