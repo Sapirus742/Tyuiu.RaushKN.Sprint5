@@ -36,7 +36,7 @@ namespace Tyuiu.RaushKN.Sprint5.Task2.V28.Lib
                     {
                         str = str + matrix[i, j];
                     }
-                    if (i != rows) File.AppendAllText(path, str + Environment.NewLine);
+                    if (i != rows-1) File.AppendAllText(path, str + Environment.NewLine);
                     else File.AppendAllText(path, str);
                     str = "";
                 }
