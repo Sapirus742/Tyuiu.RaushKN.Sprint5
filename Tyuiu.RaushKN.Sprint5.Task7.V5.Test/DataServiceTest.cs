@@ -23,7 +23,7 @@ namespace Tyuiu.RaushKN.Sprint5.Task7.V5.Test
             DataService ds = new DataService();
             string path = @"C:\DataSprint5\InPutDataFileTask7V5.txt";
             var res = ds.LoadDataAndSave(path);
-            string wait = "ооврырп";
+            string wait = ", Мир! Это.";
 
             Assert.AreEqual(wait, res);
         }

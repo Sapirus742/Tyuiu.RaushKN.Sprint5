@@ -1,4 +1,6 @@
-﻿using tyuiu.cources.programming.interfaces.Sprint5;
+﻿using System.Runtime.CompilerServices;
+using System.Text.RegularExpressions;
+using tyuiu.cources.programming.interfaces.Sprint5;
 
 namespace Tyuiu.RaushKN.Sprint5.Task7.V5.Lib
 {
@@ -6,29 +8,30 @@ namespace Tyuiu.RaushKN.Sprint5.Task7.V5.Lib
     {
         public string LoadDataAndSave(string path)
         {
-            int count = 0;
+            FileInfo fileInfo = new FileInfo(@"C:\DataSprint5\OutPutDataFileTask7V5.txt");
+            if (fileInfo.Exists)
+            {
+                File.Delete(@"C:\DataSprint5\OutPutDataFileTask7V5.txt");
+            }
+
             string res = "";
             using (StreamReader reader = new StreamReader(path))
             {
                 string line;
                 while ((line = reader.ReadLine()) != null)
                 {
-                    line = line.ToUpper();
                     for (int i = 0; i < line.Length; i++)
                     {
-                        char c = line[i];
-                        if ((c >= 'A') && (c <= 'Z')) count++;
-                        else res = res + c;
+                        res = Regex.Replace(line, "[a-z]", "", RegexOptions.IgnoreCase);
                     }
-                    res = res.ToLower();
                 }
-            }
+                
 
-            using (StreamWriter writer = new StreamWriter(@"C:\DataSprint5\OutPutDataFileTask7V5.txt."))
-            {
-                writer.WriteLine(res);
             }
-
+                using (StreamWriter writer = new StreamWriter(@"C:\DataSprint5\OutPutDataFileTask7V5.txt."))
+                {
+                    writer.WriteLine(res);
+                }
             return res;
         }
     }

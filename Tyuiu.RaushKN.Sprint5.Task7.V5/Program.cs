@@ -34,7 +34,10 @@ namespace Tyuiu.RaushKN.Sprint5.Task7.V5
             Console.WriteLine("###########################################################################");
             Console.WriteLine("# РЕЗУЛЬТАТ:                                                              #");
             Console.WriteLine("###########################################################################");
-        
+            
+            FileInfo fileInfo = new FileInfo(pathSaveFile);
+            if (fileInfo.Exists ) File.Delete(pathSaveFile);
+
             Console.WriteLine("находится в файле: "+ pathSaveFile);
             pathSaveFile = ds.LoadDataAndSave(path);
             Console.WriteLine("Полученная стока: "+pathSaveFile);
