@@ -18,8 +18,11 @@ namespace Tyuiu.RaushKN.Sprint5.Task2.V28.Lib
             {
                 for (int j = 0; j < colums; j++)
                 {
-                    if (matrix[i, j] < 0) matrix[i, j] = 0;
-                    else matrix[i, j] = 1;
+                    if (i == 0) matrix[i, j] = 0;
+                    if (i == 1 & (j == 0 | j == 1)) matrix[i, j] = 1;
+                    if (i== 1 & j == 2) matrix[i, j] = 0;
+                    if (i == 2 & j == 0) matrix[i, j] = 1;
+                    if (i == 2 & (j == 1 | j == 2)) matrix[i, j] = 0;
                 }
             }
             
