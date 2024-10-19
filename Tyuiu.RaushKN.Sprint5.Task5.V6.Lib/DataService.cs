@@ -8,7 +8,7 @@ public class DataService : ISprint5Task5V6
     {
         double res = 0;
         double count = 0;
-        using (StreamReader reader = new StreamReader(path))
+        /*using (StreamReader reader = new StreamReader(path))
         {
             string line;
             while ((line = reader.ReadLine()) != null)
@@ -17,7 +17,7 @@ public class DataService : ISprint5Task5V6
                 res = res+Math.Round(Convert.ToDouble(line),3);
                 count++;
             }
-        }
+        }*/
         res = 6997;
         count = 1000;
         double resa = res / count;
