@@ -11,7 +11,7 @@ namespace Tyuiu.RaushKN.Sprint5.Task2.V28.Lib
             bool fileExists = fileInfo.Exists;
 
             if (fileExists) File.Delete(path);
-
+             
             int rows = matrix.GetUpperBound(0) + 1;
             int colums = matrix.Length / rows;
             for (int i = 0; i < rows; i++)
@@ -26,20 +26,29 @@ namespace Tyuiu.RaushKN.Sprint5.Task2.V28.Lib
             string str = "";
 
             for (int i = 0; i < rows; i++)
+            {
                 for (int j = 0; j < colums; j++)
                 {
-                    if (j != colums-1)
+                    if (j != colums - 1)
                     {
                         str = str + matrix[i, j] + ";";
                     }
-                    else 
+                    else
                     {
                         str = str + matrix[i, j];
                     }
-                    if (i != rows-1) File.AppendAllText(path, str + Environment.NewLine);
-                    else File.AppendAllText(path, str);
-                    str = "";
                 }
+                if (i != rows - 1)
+                {
+                    File.AppendAllText(path, str + Environment.NewLine);
+                }
+                else
+                { 
+                    File.AppendAllText(path, str );
+                } 
+                str = "";
+            }
+                
                     
             return path;
         }

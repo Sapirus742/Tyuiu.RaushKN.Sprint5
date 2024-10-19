@@ -47,7 +47,7 @@ namespace Tyuiu.RaushKN.Sprint5.Task2.V28
                 while (!reader.EndOfStream)
                 {
                     var line = reader.ReadLine();
-                    var values = line.Split(';');
+                    var values = line.Split(' ');
                     Console.WriteLine(values[0]);
                 }
             }
