@@ -13,6 +13,7 @@ public class DataService : ISprint5Task5V6
             string line;
             while ((line = reader.ReadLine()) != null)
             {
+                line = line.Replace(".", ",");
                 res = res+Math.Round(Convert.ToDouble(line),3);
                 count++;
             }
