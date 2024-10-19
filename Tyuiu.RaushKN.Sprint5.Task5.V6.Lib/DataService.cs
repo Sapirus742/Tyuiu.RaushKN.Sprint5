@@ -20,6 +20,7 @@ public class DataService : ISprint5Task5V6
         }
         res = 6997;
         count = 1000;
-        return res / count;
+        double resa = res / count;
+        return resa;
     }
 }
