@@ -25,12 +25,13 @@ namespace Tyuiu.RaushKN.Sprint5.Task2.V28
             Console.WriteLine("# ИСХОДНЫЕ ДАННЫЕ:                                                        #");
             Console.WriteLine("###########################################################################");
 
-            Console.WriteLine("Введите матрицу 3x3: ");
+            /*Console.WriteLine("Введите матрицу 3x3: ");
             int[,] matrix = new int[3, 3];
             for (int i = 0; i < 3; i++) 
                 for (int j = 0; j < 3; j++)
                     matrix[i, j] = Convert.ToInt32(Console.ReadLine());
-
+            */
+            int[,] matrix = new int[,] { { -5, -2, -5 }, { 3, 1, -3 }, { 9, -2, -9 } };
             int rows =  matrix.GetUpperBound(0)+1;
             int colums = matrix.Length / rows;
 
