@@ -7,7 +7,7 @@ namespace Tyuiu.RaushKN.Sprint5.Task4.V11.Lib
     {
         public double LoadFromDataFile(string path)
         {
-            string strX = File.ReadAllText(@"/app/data/AssesmentData/C#/Sprint5Task4/InPutDataFileTask4V11.txt");
+            string strX = File.ReadAllText(path);
             double x = Convert.ToDouble(strX); 
             double res = Math.Round(Math.Sin(x) + Math.Pow(x, 2) / 2, 3);
             return res;
