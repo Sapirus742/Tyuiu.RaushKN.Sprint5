@@ -1,4 +1,5 @@
-﻿using tyuiu.cources.programming.interfaces.Sprint5;
+﻿using System.Text.RegularExpressions;
+using tyuiu.cources.programming.interfaces.Sprint5;
 using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace Tyuiu.RaushKN.Sprint5.Task4.V11.Lib
@@ -9,6 +10,7 @@ namespace Tyuiu.RaushKN.Sprint5.Task4.V11.Lib
         {
             string strX = File.ReadAllText(path);
             FileInfo fileInfo = new FileInfo(path);
+            strX = strX.Replace(".", ",");
             if (fileInfo.Exists)
             {
                 double x = Convert.ToDouble(strX);
