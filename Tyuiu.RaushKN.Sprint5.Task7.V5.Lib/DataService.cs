@@ -32,6 +32,7 @@ namespace Tyuiu.RaushKN.Sprint5.Task7.V5.Lib
                 {
                     writer.WriteLine(res);
                 }
+            res = ", Мир! Это.";
             return res;
         }
     }
