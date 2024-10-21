@@ -8,10 +8,10 @@ namespace Tyuiu.RaushKN.Sprint5.Task7.V5.Lib
     {
         public string LoadDataAndSave(string path)
         {
-            FileInfo fileInfo = new FileInfo(@"C:\DataSprint5\OutPutDataFileTask7V5.txt");
+            FileInfo fileInfo = new FileInfo(path);
             if (fileInfo.Exists)
             {
-                File.Delete(@"C:\DataSprint5\OutPutDataFileTask7V5.txt");
+                File.Delete(path);
             }
 
             string res = "";
@@ -28,7 +28,7 @@ namespace Tyuiu.RaushKN.Sprint5.Task7.V5.Lib
                 
 
             }
-                using (StreamWriter writer = new StreamWriter(@"C:\DataSprint5\OutPutDataFileTask7V5.txt."))
+                using (StreamWriter writer = new StreamWriter(path))
                 {
                     writer.WriteLine(res);
                 }
