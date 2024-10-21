@@ -10,6 +10,7 @@ namespace Tyuiu.RaushKN.Sprint5.Task7.V5.Lib
         {
 
             string res = "";
+            string res1 = "";
             using (StreamReader reader = new StreamReader(path))
             {
                 string line;
@@ -18,6 +19,16 @@ namespace Tyuiu.RaushKN.Sprint5.Task7.V5.Lib
                     for (int i = 0; i < line.Length; i++)
                     {
                         res = Regex.Replace(line, "[a-z]", "", RegexOptions.IgnoreCase);
+                    }
+
+                    for (int i = 0;i < line.Length; i++)
+                    {
+                        if (res[i] == 'о')
+                        {
+                            res1 += ".";
+                            break;
+                        }
+                        res1 += res[i];
                     }
                 }
                 
