@@ -28,7 +28,7 @@ namespace Tyuiu.RaushKN.Sprint5.Task7.V5.Lib
                 
 
             }
-                using (StreamWriter writer = new StreamWriter(path))
+                using (StreamWriter writer = new StreamWriter(Path.Combine(new string[] {Path.GetTempPath(), "OutPutDataFileTask7V5.txt" })))
                 {
                     writer.WriteLine(res);
                 }
