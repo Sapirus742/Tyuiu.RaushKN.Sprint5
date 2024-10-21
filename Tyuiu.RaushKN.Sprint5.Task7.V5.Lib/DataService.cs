@@ -25,7 +25,7 @@ namespace Tyuiu.RaushKN.Sprint5.Task7.V5.Lib
                     {
                         if (res[i] == 'о')
                         {
-                            res1 += ".";
+                            res1 += "о.";
                             break;
                         }
                         res1 += res[i];
