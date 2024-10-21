@@ -8,11 +8,6 @@ namespace Tyuiu.RaushKN.Sprint5.Task7.V5.Lib
     {
         public string LoadDataAndSave(string path)
         {
-            FileInfo fileInfo = new FileInfo(path);
-            if (fileInfo.Exists)
-            {
-                File.Delete(path);
-            }
 
             string res = "";
             using (StreamReader reader = new StreamReader(path))
@@ -28,7 +23,12 @@ namespace Tyuiu.RaushKN.Sprint5.Task7.V5.Lib
                 
 
             }
-                using (StreamWriter writer = new StreamWriter(Path.Combine(new string[] {Path.GetTempPath(), "OutPutDataFileTask7V5.txt" })))
+            FileInfo fileInfo = new FileInfo(Path.Combine(new string[] { Path.GetTempPath(), "OutPutDataFileTask7V5.txt" }));
+            if (fileInfo.Exists)
+            {
+                File.Delete(Path.Combine(new string[] { Path.GetTempPath(), "OutPutDataFileTask7V5.txt" }));
+            }
+            using (StreamWriter writer = new StreamWriter(Path.Combine(new string[] {Path.GetTempPath(), "OutPutDataFileTask7V5.txt" })))
                 {
                     writer.WriteLine(res);
                 }
