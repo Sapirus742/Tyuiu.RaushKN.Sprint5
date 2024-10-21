@@ -15,10 +15,9 @@ public class DataService : ISprint5Task5V6
             while ((line = reader.ReadLine()) != null)
             {
                 line = line.Replace(".", ",");
-                array = line.Split(' ');
-                for(int i = 0; i < array.Length; i++)
+                for(int i = 0; i < line.Length; i++)
                 {
-                    res = res + Math.Round(Convert.ToDouble(array[i]), 3);
+                    res = res + Math.Round(Convert.ToDouble(line), 3);
                     count++;
                 }
                 
