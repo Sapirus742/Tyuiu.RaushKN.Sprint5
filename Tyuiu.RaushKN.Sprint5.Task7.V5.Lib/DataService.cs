@@ -8,7 +8,6 @@ namespace Tyuiu.RaushKN.Sprint5.Task7.V5.Lib
     {
         public string LoadDataAndSave(string path)
         {
-            /*
             FileInfo fileInfo = new FileInfo(path);
             if (fileInfo.Exists)
             {
@@ -33,8 +32,6 @@ namespace Tyuiu.RaushKN.Sprint5.Task7.V5.Lib
                 {
                     writer.WriteLine(res);
                 }
-            */
-            string res = ", Мир! Это.";
             return res;
         }
     }
